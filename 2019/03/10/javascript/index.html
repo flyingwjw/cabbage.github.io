@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cabbage">
-<meta property="og:url" content="https://flyingwjw.github.io/index.html">
+<meta name="description" content="函数arguments参数利用arguments，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值 arguments类似Array但它不是一个Array rest参数由于JavaScript函数允许接收任意个参数，于是我们就不得不用arguments来获取所有参数： 1234567891011function foo(a, b) &amp;#123;    var">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript">
+<meta property="og:url" content="https://flyingwjw.github.io/2019/03/10/javascript/index.html">
 <meta property="og:site_name" content="Cabbage">
+<meta property="og:description" content="函数arguments参数利用arguments，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值 arguments类似Array但它不是一个Array rest参数由于JavaScript函数允许接收任意个参数，于是我们就不得不用arguments来获取所有参数： 1234567891011function foo(a, b) &amp;#123;    var">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-11T15:50:40.002Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cabbage">
+<meta name="twitter:title" content="javascript">
+<meta name="twitter:description" content="函数arguments参数利用arguments，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值 arguments类似Array但它不是一个Array rest参数由于JavaScript函数允许接收任意个参数，于是我们就不得不用arguments来获取所有参数： 1234567891011function foo(a, b) &amp;#123;    var">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://flyingwjw.github.io/">
+  <link rel="canonical" href="https://flyingwjw.github.io/2019/03/10/javascript/">
 
 
 
 
 
-  <title>Cabbage</title>
+  <title>javascript | Cabbage</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 	<a href="https://github.com/flyingwjw"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
 
@@ -295,9 +298,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -327,9 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/10/javascript/" itemprop="url">javascript</a></h1>
+          <h1 class="post-title" itemprop="name headline">javascript</h1>
         
 
         <div class="post-meta">
@@ -379,9 +380,7 @@
       
 
       
-        
-          
-            <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="arguments参数"><a href="#arguments参数" class="headerlink" title="arguments参数"></a>arguments参数</h2><p>利用<code>arguments</code>，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值</p>
+        <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="arguments参数"><a href="#arguments参数" class="headerlink" title="arguments参数"></a>arguments参数</h2><p>利用<code>arguments</code>，你可以获得调用者传入的所有参数。也就是说，即使函数不定义任何参数，还是可以拿到参数的值</p>
 <p>arguments<code>类似</code>Array<code>但它不是一个</code>Array</p>
 <h2 id="rest参数"><a href="#rest参数" class="headerlink" title="rest参数"></a>rest参数</h2><p>由于JavaScript函数允许接收任意个参数，于是我们就不得不用<code>arguments</code>来获取所有参数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function foo(a, b) &#123;</span><br><span class="line">    var i, rest = [];</span><br><span class="line">    if (arguments.length &gt; 2) &#123;</span><br><span class="line">        for (i = 2; i&lt;arguments.length; i++) &#123;</span><br><span class="line">            rest.push(arguments[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(&apos;a = &apos; + a);</span><br><span class="line">    console.log(&apos;b = &apos; + b);</span><br><span class="line">    console.log(rest);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -546,8 +545,6 @@ var [x, y, z] = [&#39;hello&#39;, &#39;JavaScript&#39;, &#39;ES6&#39;];</code> R
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">buildDate(&#123; year: 2017, month: 1, day: 1, hour: 20, minute: 15 &#125;);</span><br><span class="line">// Sun Jan 01 2017 20:15:00 GMT+0800 (CST)</span><br></pre></td></tr></table></figure>
 <p>使用解构赋值可以减少代码量，但是，需要在支持ES6解构赋值特性的现代浏览器中才能正常运行。目前支持解构赋值的浏览器包括Chrome，Firefox，Edge等。</p>
 
-          
-        
       
     </div>
     
@@ -564,140 +561,28 @@ var [x, y, z] = [&#39;hello&#39;, &#39;JavaScript&#39;, &#39;ES6&#39;];</code> R
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://flyingwjw.github.io/2019/03/10/hello-world/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Groot">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cabbage">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/10/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-10T17:14:34+08:00">
-                2019-03-10
-              </time>
+              <a href="/2019/03/10/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -707,10 +592,11 @@ var [x, y, z] = [&#39;hello&#39;, &#39;JavaScript&#39;, &#39;ES6&#39;];</code> R
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -718,6 +604,10 @@ var [x, y, z] = [&#39;hello&#39;, &#39;JavaScript&#39;, &#39;ES6&#39;];</code> R
 
 
           
+
+  
+
+
 
         </div>
         
@@ -738,8 +628,17 @@ var [x, y, z] = [&#39;hello&#39;, &#39;JavaScript&#39;, &#39;ES6&#39;];</code> R
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -781,6 +680,22 @@ var [x, y, z] = [&#39;hello&#39;, &#39;JavaScript&#39;, &#39;ES6&#39;];</code> R
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#函数"><span class="nav-number">1.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#arguments参数"><span class="nav-number">1.1.</span> <span class="nav-text">arguments参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rest参数"><span class="nav-number">1.2.</span> <span class="nav-text">rest参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call-and-apply"><span class="nav-number">1.3.</span> <span class="nav-text">call and apply</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#call-和-apply"><span class="nav-number">1.3.0.1.0.1.</span> <span class="nav-text">call 和 apply</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用法"><span class="nav-number">1.3.0.2.</span> <span class="nav-text">用法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#调用函数，传递参数"><span class="nav-number">1.3.0.2.0.1.</span> <span class="nav-text">调用函数，传递参数</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#改变函数作用域"><span class="nav-number">1.3.0.2.0.2.</span> <span class="nav-text">改变函数作用域</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级用法，实现-js-继承"><span class="nav-number">1.3.0.3.</span> <span class="nav-text">高级用法，实现 js 继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#区别"><span class="nav-number">1.3.0.4.</span> <span class="nav-text">区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结束语"><span class="nav-number">1.3.0.5.</span> <span class="nav-text">结束语</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#变量和作用域"><span class="nav-number">1.4.</span> <span class="nav-text">变量和作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量提升"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#全局作用域"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">全局作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#名字空间"><span class="nav-number">1.4.0.3.</span> <span class="nav-text">名字空间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部作用域"><span class="nav-number">1.4.0.4.</span> <span class="nav-text">局部作用域</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量作用域与解构赋值"><span class="nav-number">1.4.0.5.</span> <span class="nav-text">变量作用域与解构赋值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量提升-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局作用域-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">全局作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#名字空间-1"><span class="nav-number">1.4.3.</span> <span class="nav-text">名字空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局部作用域-1"><span class="nav-number">1.4.4.</span> <span class="nav-text">局部作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量"><span class="nav-number">1.4.5.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解构赋值"><span class="nav-number">1.4.6.</span> <span class="nav-text">解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量作用域与解构赋值-1"><span class="nav-number">1.4.6.1.</span> <span class="nav-text">变量作用域与解构赋值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量提升-2"><span class="nav-number">1.4.7.</span> <span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局作用域-2"><span class="nav-number">1.4.8.</span> <span class="nav-text">全局作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#名字空间-2"><span class="nav-number">1.4.9.</span> <span class="nav-text">名字空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局部作用域-2"><span class="nav-number">1.4.10.</span> <span class="nav-text">局部作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常量-1"><span class="nav-number">1.4.11.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解构赋值-1"><span class="nav-number">1.4.12.</span> <span class="nav-text">解构赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用场景"><span class="nav-number">1.4.12.1.</span> <span class="nav-text">使用场景</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -921,6 +836,10 @@ var [x, y, z] = [&#39;hello&#39;, &#39;JavaScript&#39;, &#39;ES6&#39;];</code> R
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
